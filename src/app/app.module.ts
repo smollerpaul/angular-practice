@@ -11,10 +11,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { HighlightDirective } from './highlight.directive';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NameEditorComponent } from './name-editor/name-editor.component';
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+
 
 @NgModule({
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     FormsModule,
     AppRoutingModule, 
     HttpClientModule,
@@ -26,7 +33,11 @@ import { InMemoryDataService } from './in-memory-data.service';
     DashboardComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    HeroSearchComponent,
+    HighlightDirective,
+    NameEditorComponent,
+    ProfileEditorComponent
   ],
   bootstrap: [AppComponent]
 })
